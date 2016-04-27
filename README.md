@@ -1,1 +1,2 @@
 "# EliteMemes" 
+Elite Memers only.
