@@ -1,0 +1,71 @@
+import random
+import sys
+from time import sleep
+def typewrite(str):
+	import sys
+	from time import sleep
+
+	for char in str:
+		sleep(0.03)
+		sys.stdout.write(char)
+		sys.stdout.flush()
+
+
+gold = 0
+weapon = 0
+#game function
+
+
+#print_pause([
+	#("fajdk;jkajdjkdf;adfajd;k", 2),
+	#("jdfka;djk;ajdfk;ajdkfj;adfjk;", 2),
+	#])
+
+print 						("w-------------------------------w")
+print 						("Welcome to the cavern of secrets!")
+print 						("w---------------------------------w")
+
+name = raw_input("What is your name\n")
+typewrite("You Enter A Hold abandon house and find a mace Will you pick it up?\n")
+q1 = raw_input("Yes or No\n").lower()
+if q1 == "yes":
+	weapon = 1
+	
+elif q1 == "no":
+	weapon = 0
+	gold = 50
+	typewrite ("\n		Gold = {}".format(gold))
+	#notworking time.sleep(1)
+	typewrite ("\nYour first boss aproaches do you wish to fight him ?\n")
+bossq1 = raw_input("Yes or no\n").lower()
+if bossq1 == "yes":
+	fight1yes()
+elif bossq1 == "no":
+	fight1no()
+
+def fight1yes():
+	if weapon == 1:
+		print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    	print ("                  Fighting...                   ")
+    	print ("   YOU MUST HIT ABOVE A 5 TO KILL THE SPIDER    ")
+   		print ("IF THE SPIDER HITS HIGHER THAN YOU, YOU WILL DIE")
+    	print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    	fdmg1 = int(random.randint(3, 10))
+    	edmg1 = int(random.randint(1, 5))
+    	print ("you hit a ", fdmg1)
+    	print ("the spider hits a", edmg1)
+
+    if edmg1 > fdmg1:
+    	print("\nThe spider has dealt more damage than you!")
+    	complete = 0
+    	return complete
+    elif fdmg1 < 5:
+    	print ("\nyou didn't do enough damage to kill the spider but you manage to live")
+    	complete = 2
+    	return complete
+    else:
+    	print ("\nyou killed the spider")
+    	complete = 1
+    	return complete
+    elif weapon = 0
+    print('no weapon')
