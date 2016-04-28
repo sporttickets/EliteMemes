@@ -10,6 +10,9 @@ else:
 	def getInput(text):
 		return raw_input(text)
 
+def getInputLow(text):
+	return getInput(text).lower()
+
 def loading(str):
 	for char in str:
 		sleep(0.0)
@@ -60,7 +63,7 @@ def text():
 def left0():
 	typewrite ("\nYou walk to the village on the left\n you notice its quite clean and niffty")
 	typewrite ("\n You see a pub and a general market")
-	q2 = getInput("\n Pub or Market\n").lower()
+	q2 = getInputLow("\n Pub or Market\n")
 	if q2 == "pub":
 		pub()
 	elif q2 == "market":
@@ -72,7 +75,7 @@ def right0():
 	typewrite ("\n You Sprint towrds this village becuase this is not a village you have ever seen before its extra unordianry\n")
 	typewrite ("\n You see people Flying Zipping around on mechanical lines you see elvavotors that go higher than ever before\n")
 	typewrite ("\n what will you do You see somone standing there with a sign on information to this new town or will you just go to the evlavtor and see where you go\n")
-	q3 = getInput("\n Talk or Explore").lower()
+	q3 = getInputLow("\n Talk or Explore")
 	if q3 == "talk":
 		talk()
 	elif q3 == "explore":
@@ -80,7 +83,7 @@ def right0():
 
 def main():
 	text()
-	q1 = getInput("\nplease choose the village you want to enter\nLeft or Right\n").lower()
+	q1 = getInputLow("\nplease choose the village you want to enter\nLeft or Right\n")
 	if q1 == "left":
 		left0()
 	elif q1 == "right":
