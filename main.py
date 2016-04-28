@@ -3,6 +3,13 @@ import time
 from time import sleep
 import random
 
+if sys.version_info[0] == 3:
+	def getInput(text):
+		return input(text)
+else:
+	def getInput(text):
+		return raw_input(text)
+
 def loading(str):
 	for char in str:
 		sleep(0.0)
@@ -16,7 +23,7 @@ def typewrite(str):
 		sys.stdout.flush()
 
 random.seed(time.time())
-name=raw_input("What Is Your Name?\n")
+name = getInput("What Is Your Name?\n")
 hp = 100
 dead = False
 
@@ -53,7 +60,7 @@ def text():
 def left0():
 	typewrite ("\nYou walk to the village on the left\n you notice its quite clean and niffty")
 	typewrite ("\n You see a pub and a general market")
-	q2 = raw_input("\n Pub or Market\n").lower()
+	q2 = getInput("\n Pub or Market\n").lower()
 	if q2 == "pub":
 		pub()
 	elif q2 == "market":
@@ -65,7 +72,7 @@ def right0():
 	typewrite ("\n You Sprint towrds this village becuase this is not a village you have ever seen before its extra unordianry\n")
 	typewrite ("\n You see people Flying Zipping around on mechanical lines you see elvavotors that go higher than ever before\n")
 	typewrite ("\n what will you do You see somone standing there with a sign on information to this new town or will you just go to the evlavtor and see where you go\n")
-	q3 = raw_input("\n Talk or Explore").lower()
+	q3 = getInput("\n Talk or Explore").lower()
 	if q3 == "talk":
 		talk()
 	elif q3 == "explore":
@@ -73,7 +80,7 @@ def right0():
 
 def main():
 	text()
-	q1 = raw_input("\nplease choose the village you want to enter\nLeft or Right\n").lower()
+	q1 = getInput("\nplease choose the village you want to enter\nLeft or Right\n").lower()
 	if q1 == "left":
 		left0()
 	elif q1 == "right":
