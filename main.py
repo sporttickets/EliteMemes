@@ -1,26 +1,21 @@
 import sys
+import time
 from time import sleep
 import random
 
 def loading(str):
-	import sys
-	from time import sleep
-
 	for char in str:
 		sleep(0.0)
 		sys.stdout.write(char)
 		sys.stdout.flush()
 
 def typewrite(str):
-	import sys
-	from time import sleep
-
 	for char in str:
 		sleep(0.03)
 		sys.stdout.write(char)
 		sys.stdout.flush()
 
-
+random.seed(time.time())
 name=raw_input("What Is Your Name?\n")
 hp = 100
 dead = False
